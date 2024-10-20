@@ -18,12 +18,13 @@ body {
   --color-blue: #00A4E5;
 
   --transition-time: .7s;
+  --media-pd-mob: 25px;
 }
 
 
 /* Мульти-блоки */
 .main-style-link {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--text-white);
@@ -32,6 +33,22 @@ body {
 .main-container {
   margin-inline: auto;
   max-width: 940px;
+}
+
+.content-style-title {
+  color: var(--color-gray);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2.306px;
+  text-transform: uppercase;
+}
+
+.content-style-text {
+  color: var(--color-gray);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.188px;
 }
 
 
@@ -53,17 +70,13 @@ body {
 }
 
 .header__wrapper-title {
-  max-width: 568px;
   text-align: center;
+  color: var(--text-white);
 }
 
 .header__title {
   padding-top: 87px;
-  position: relative;
-  display: inline-flex;
-  color: var(--text-white);
   text-transform: uppercase;
-  text-wrap: nowrap;
   font-family: "Bebas";
   font-size: 60px;
   font-weight: 400;
@@ -74,7 +87,6 @@ body {
   margin-top: -5px;
   font-size: 16px;
   font-weight: 600;
-  color: var(--text-white);
 }
 
 .header__scroll {
@@ -94,27 +106,100 @@ body {
   justify-content: space-between;
   min-height: 65px;
 }
-.nav__logo-link {
-}
+
 .nav__logo {
   max-width: 80px;
 }
+
 .nav__menu {
   display: flex;
   gap: 39px;
 }
+
 .nav__wrapper-link {
-  color: var(--color-gray);
   text-transform: uppercase;
-  font-size: 12px;
   font-weight: 600;
   letter-spacing: 1.091px;
 }
 
-.nav__wrapper-link:hover {
+.nav__item {
+  color: var(--color-gray);
+}
+
+.nav__item:hover {
   color: var(--color-blue);
-  text-shadow: 0 0 1px var(--color-blue);
+  text-shadow: 0 1px 1.5px var(--color-blue);
   transition: var(--transition-time);
 }
-.nav__item {
+
+
+/* О компании */
+.main-content__about {
+  padding-top: 55px;
+  padding-bottom: 100px;
+  display: grid;
+  gap: 53px 80px;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "title title"
+    "text banner";
+}
+
+.main-content__about-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.188px;
+  text-align: center;
+  color: var(--color-gray);
+  grid-area: title;
+}
+
+.main-content__about-title::after {
+  content: "";
+  display: block;
+  margin-inline: auto;
+  margin-top: 10px;
+  max-width: 50px;
+  min-height: 2px;
+  background-color: var(--color-blue);
+}
+
+.main-content__about-wrapper-text {
+  grid-area: text;
+}
+
+.main-content__about-subtitle {
+  margin-bottom: 30px;
+  color: var(--color-gray);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.188px;
+}
+
+.main-content__about-accent {
+  color: var(--color-blue);
+}
+
+.main-content__about-banners {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: end;
+  grid-area: banner;
+}
+
+.main-content__about-banner {
+  padding: 15px;
+  max-width: 140px;
+  min-height: 224px;
+}
+
+.main-content__about-banner-text {
+  color: var(--text-white);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 29px;
+  letter-spacing: 0.188px;
+  text-transform: uppercase;
 }
