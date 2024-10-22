@@ -393,8 +393,6 @@ body {
   max-width: 100px;
 }
 
-.footer__text {}
-
 .footer__links {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -438,13 +436,6 @@ body {
 .footer__list-link:not(:last-child) {
   margin-bottom: 5px;
 }
-
-.footer__list-item {
-}
-
-.footer__contact {}
-
-.footer__list-contact {}
 
 .footer__container-icon {
   padding-top: 37px;
