@@ -14,7 +14,9 @@
 
 
 ## Технологии
+- PerfectPixel
 - БЭМ
 - CSS
 - HTML
 ## Ссылка 
+https://shvepsnekeks.github.io/Konstuct/
