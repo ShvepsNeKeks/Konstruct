@@ -3,6 +3,10 @@
   src: url(../font/Bebas\ Neue.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #FFF;
   font-family: "Open Sans", sans-serif;
@@ -17,9 +21,9 @@ body {
   --color-gray: #48555B;
   --color-blue: #00A4E5;
   --color-black: #171819;
-  ;
+  --color-bgc-footer: #141A20;
 
-  --transition-time: .7s;
+  --transition-time: .3s;
   --media-pd-mob: 25px;
 }
 
@@ -30,6 +34,12 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   color: var(--text-white);
+  transition: var(--transition-time);
+}
+
+.main-style-link:hover {
+  color: var(--color-blue);
+  text-shadow: 0 0 1.5px var(--color-blue);
 }
 
 .main-container {
@@ -65,7 +75,7 @@ body {
   font-size: 13px;
   color: var(--text-white);
   background-color: var(--color-blue);
-  transition: var(--transition-time);
+  transition: .7s;
 }
 
 .hero-btn:hover {
@@ -143,17 +153,9 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1.091px;
-}
-
-.nav__item {
   color: var(--color-gray);
 }
 
-.nav__item:hover {
-  color: var(--color-blue);
-  text-shadow: 0 1px 1.5px var(--color-blue);
-  transition: var(--transition-time);
-}
 
 /* Контейнер с главным контентом */
 .main-content {
@@ -346,39 +348,118 @@ body {
 
 /* Подвал */
 .footer {
-}
-.footer__container {
-}
-.footer__company {
-}
-.footer__title {
-}
-.main-style-link {
-}
-.footer__logo {
-}
-.footer__img {
-}
-.footer__text {
-}
-.footer__links {
-}
-.footer__list-links-1 {
-}
-.footer__list-link {
-}
-.footer__list-item {
-}
-.footer__list-links-2 {
-}
-.footer__list-links-3 {
-}
-.footer__contact {
-}
-.footer__list-contact {
-}
-.footer__container-icon {
-}
-.footer__icon {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  background-color: var(--color-bgc-footer);
+  color: var(--text-white);
+  color: #FFF;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.85px;
 }
 
+.footer::after {
+  content: "© 2017 Konstruct Inc. Designed by Jane Kathryn Teo";
+  position: absolute;
+  padding: 0 var(--media-pd-mob);
+  top: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 60px;
+  background-color: var(--color-black);
+}
+
+.footer__container {
+  display: flex;
+  gap: 71px;
+}
+
+.footer__company {
+  max-width: 250px;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer__img {
+  max-width: 100px;
+}
+
+.footer__text {}
+
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 0 30px;
+  grid-template-areas:
+    "link-title link-title link-title"
+    "list-link-1 list-link-2 list-link-3";
+}
+
+.footer__links:first-child {
+  grid-area: link-title;
+}
+
+.footer__title {
+  margin-bottom: 25px;
+  color: var(--text-white);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.846px;
+  text-transform: uppercase;
+}
+
+.footer__list-links-1 {
+  grid-area: list-link-1;
+}
+
+.footer__list-links-2 {
+  grid-area: list-link-2;
+}
+
+.footer__list-links-3 {
+  grid-area: list-link-3;
+}
+
+.footer__list-link {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.footer__list-link:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.footer__list-item {
+}
+
+.footer__contact {}
+
+.footer__list-contact {}
+
+.footer__container-icon {
+  padding-top: 37px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer__icon {
+  fill: var(--text-white);
+  min-width: 25px;
+  aspect-ratio: 1;
+  transition: var(--transition-time);
+}
+
+.footer__icon:hover {
+  fill: var(--color-blue);
+}

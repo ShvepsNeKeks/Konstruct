@@ -25,7 +25,27 @@
     flex-direction: column;
     gap: 30px;
   }
+
+  .footer__container {
+    padding: var(--media-pd-mob);
+    /* justify-content: center; */
+    flex-wrap: wrap;
+  }
+
+  .footer__list-link:not(:last-child) {
+    margin-right: 20px;
+    margin-bottom: 0px;
+  }
+
+  .footer__links {
+    max-width: 400px;
+  }
+
+  .footer__list-links-1 {
+    max-width: 120px;
+  }
 }
+
 
 @media screen and (max-width: 710px) {
   .hero-btn {
@@ -88,5 +108,13 @@
 
   .subscription__email {
     padding: 11.5px;
+  }
+
+  .footer__container-icon {
+    padding-top: 0;
+  }
+
+  .footer__container {
+    justify-content: center;
   }
 }
